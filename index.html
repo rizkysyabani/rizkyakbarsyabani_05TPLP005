@@ -1,0 +1,701 @@
+<html>
+ <head>
+  <title>
+   Sistem Informasi Manajemen Karyawan
+  </title>
+  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            background-color: #f8fdfc;
+        }
+        .sidebar {
+            height: 100vh;
+            background-color: #fff;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar .nav-link {
+            color: #000;
+        }
+        .sidebar .nav-link.active {
+            background-color: green;
+            color: #fff;
+        }
+        .sidebar .nav-link i {
+            margin-right: 10px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .header {
+            background-color: green;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  </style>
+ </head>
+ <body>
+  <div class="d-flex">
+   <div class="sidebar p-3">
+    <div class="text-center mb-4">
+     <img alt="Adaro Logo" class="img-fluid rounded-circle mb-2" height="100" src="adro.jpg" width="100"/>
+     <h5>
+      Adaro Energy
+     </h5>
+    </div>
+    <div class="mb-4">
+     <p>
+      Welcome, Rizky Akbar
+     </p>
+     <p>
+      <strong>
+       Administrator
+      </strong>
+     </p>
+    </div>
+    <nav class="nav flex-column">
+     <a class="nav-link active" href="#">
+      <i class="fas fa-tachometer-alt">
+      </i>
+      Dashboard
+     </a>
+     <p class="mt-3 mb-1">
+      <strong>
+       MENU ADMIN
+      </strong>
+     </p>
+     <a class="nav-link" href="#">
+      <i class="fas fa-user-cog">
+      </i>
+      Pengguna
+     </a>
+     <p class="mt-3 mb-1">
+      <strong>
+       MENU KARYAWAN
+      </strong>
+     </p>
+     <a class="nav-link" href="#">
+      <i class="fas fa-users">
+      </i>
+      Karyawan
+     </a>
+     <a class="nav-link" href="#">
+      <i class="fas fa-briefcase">
+      </i>
+      Jabatan
+     </a>
+     <a class="nav-link" href="#">
+      <i class="fas fa-sitemap">
+      </i>
+      Divisi
+     </a>
+     <p class="mt-3 mb-1">
+      <strong>
+       MENU ABSENSI
+      </strong>
+     </p>
+     <a class="nav-link" href="#">
+      <i class="fas fa-calendar-check">
+      </i>
+      Absensi
+     </a>
+     <a class="nav-link" href="#">
+      <i class="fas fa-calendar-times">
+      </i>
+      Izin
+     </a>
+     <a class="nav-link" href="#">
+      <i class="fas fa-clock">
+      </i>
+      Lembur
+     </a>
+     <p class="mt-3 mb-1">
+      <strong>
+       MENU PENGGAJIAN
+      </strong>
+     </p>
+     <a class="nav-link" href="#">
+      <i class="fas fa-file-invoice-dollar">
+      </i>
+      Slip Gaji
+     </a>
+     <a class="nav-link" href="#">
+      <i class="fas fa-print">
+      </i>
+      Cetak Gaji
+     </a>
+     <p class="mt-3 mb-1">
+      <strong>
+       MENU LAPORAN
+      </strong>
+     </p>
+     <a class="nav-link" href="#">
+      <i class="fas fa-file-alt">
+      </i>
+      Cetak Laporan
+     </a>
+     <a class="nav-link mt-3" href="#">
+      <i class="fas fa-sign-out-alt">
+      </i>
+      Logout
+     </a>
+    </nav>
+   </div>
+   <div class="content flex-grow-1">
+    <div class="header d-flex justify-content-between align-items-center">
+     <h4>
+      Adaro Energy
+     </h4>
+     
+     <i class="fas fa-user-circle fa-2x">
+
+     </i>
+    </div>
+    <div class="mt-4">
+     <h5>
+      Sistem Informasi Manajemen Karyawan
+     </h5>
+     <p>
+      Admin Dashboard
+     </p>
+     <div class="row">
+      <div class="col-md-3">
+       <div class="card p-3 mb-3">
+        <div class="d-flex align-items-center">
+         <i class="fas fa-users fa-2x text-primary">
+         </i>
+         <div class="ms-3">
+          <h6>
+           Data Pegawai
+          </h6>
+          <p class="mb-0">
+           13
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="card p-3 mb-3">
+        <div class="d-flex align-items-center">
+         <i class="fas fa-calendar-alt fa-2x text-success">
+         </i>
+         <div class="ms-3">
+          <h6>
+           Absensi Hari Ini
+          </h6>
+          <p class="mb-0">
+           11 May 2023
+          </p>
+          <p class="mb-0">
+           0
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="card p-3 mb-3">
+        <div class="d-flex align-items-center">
+         <i class="fas fa-check-circle fa-2x text-info">
+         </i>
+         <div class="ms-3">
+          <h6>
+           Izin Menunggu Konfirmasi
+          </h6>
+          <p class="mb-0">
+           2
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="col-md-3">
+       <div class="card p-3 mb-3">
+        <div class="d-flex align-items-center">
+         <i class="fas fa-check-circle fa-2x text-info">
+         </i>
+         <div class="ms-3">
+          <h6>
+           Lembur Menunggu Konfirmasi
+          </h6>
+          <p class="mb-0">
+           1
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div id="content-area">
+      <!-- Content for each menu item -->
+      <div id="pengguna" class="d-none">
+       <h5>
+        Pengguna
+       </h5>
+       <p>
+        Daftar pengguna yang terdaftar dalam sistem.
+       </p>
+       <ul>
+        <li>
+         Pengguna 1
+        </li>
+        <li>
+         Pengguna 2
+        </li>
+        <li>
+         Pengguna 3
+        </li>
+       </ul>
+      </div>
+      <div id="karyawan" class="d-none">
+       <h5>
+        Karyawan
+       </h5>
+       <p>
+        Daftar karyawan yang bekerja di perusahaan.
+       </p>
+       <table class="table table-bordered">
+        <thead>
+         <tr>
+          <th>
+           Nomor
+          </th>
+          <th>
+           Kode Karyawan
+          </th>
+          <th>
+           Nama Karyawan
+          </th>
+          <th>
+           Email Karyawan
+          </th>
+          <th>
+           Alamat Karyawan
+          </th>
+          <th>
+           Jabatan Karyawan
+          </th>
+          <th>
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           1
+          </td>
+          <td>
+           K001
+          </td>
+          <td>
+           Rizky Akbar
+          </td>
+          <td>
+           rizkyakbar@gmail.com
+          </td>
+          <td>
+           Jl. Sudirman
+          </td>
+          <td>
+           Manager
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           2
+          </td>
+          <td>
+           K002
+          </td>
+          <td>
+           Sandi
+          </td>
+          <td>
+           sandi@gmail.com
+          </td>
+          <td>
+           Jl. Kertanegara No. 2
+          </td>
+          <td>
+           Staff
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           3
+          </td>
+          <td>
+           K003
+          </td>
+          <td>
+           Boy
+          </td>
+          <td>
+           boy@gmail.com
+          </td>
+          <td>
+           Jl. Widya No. 3
+          </td>
+          <td>
+           Supervisor
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div id="jabatan" class="d-none">
+       <h5>
+        Jabatan
+       </h5>
+       <p>
+        Daftar jabatan yang ada di perusahaan.
+       </p>
+       <table class="table table-bordered">
+        <thead>
+         <tr>
+          <th>
+           Nomor
+          </th>
+          <th>
+           Kode Jabatan
+          </th>
+          <th>
+           Nama Jabatan
+          </th>
+          <th>
+           Deskripsi Jabatan
+          </th>
+          <th>
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           1
+          </td>
+          <td>
+           A001
+          </td>
+          <td>
+           Manager
+          </td>
+          <td>
+           Bertanggung jawab atas pengelolaan tim.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           2
+          </td>
+          <td>
+           A002
+          </td>
+          <td>
+           Staff
+          </td>
+          <td>
+           Melaksanakan tugas operasional.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           3
+          </td>
+          <td>
+           A003
+          </td>
+          <td>
+           Supervisor
+          </td>
+          <td>
+           Mengawasi dan mengarahkan tim.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div id="divisi" class="d-none">
+       <h5>
+        Divisi
+       </h5>
+       <p>
+        Daftar divisi yang ada di perusahaan.
+       </p>
+       <table class="table table-bordered">
+        <thead>
+         <tr>
+          <th>
+           Nomor
+          </th>
+          <th>
+           Kode Divisi
+          </th>
+          <th>
+           Nama Divisi
+          </th>
+          <th>
+           Deskripsi Divisi
+          </th>
+          <th>
+           Aksi
+          </th>
+         </tr>
+        </thead>
+        <tbody>
+         <tr>
+          <td>
+           1
+          </td>
+          <td>
+           D001
+          </td>
+          <td>
+           Divisi HR
+          </td>
+          <td>
+           Mengelola sumber daya manusia.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           2
+          </td>
+          <td>
+           D002
+          </td>
+          <td>
+           Divisi IT
+          </td>
+          <td>
+           Mengelola teknologi informasi.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+         <tr>
+          <td>
+           3
+          </td>
+          <td>
+           D003
+          </td>
+          <td>
+           Divisi Keuangan
+          </td>
+          <td>
+           Mengelola keuangan perusahaan.
+          </td>
+          <td>
+           <button class="btn btn-warning btn-sm">
+            Edit
+           </button>
+           <button class="btn btn-danger btn-sm">
+            Hapus
+           </button>
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
+      <div id="absensi" class="d-none">
+       <h5>
+        Absensi
+       </h5>
+       <p>
+        Daftar absensi karyawan.
+       </p>
+       <ul>
+        <li>
+         Absensi 1
+        </li>
+        <li>
+         Absensi 2
+        </li>
+        <li>
+         Absensi 3
+        </li>
+       </ul>
+      </div>
+      <div id="izin" class="d-none">
+       <h5>
+        Izin
+       </h5>
+       <p>
+        Daftar izin karyawan.
+       </p>
+       <ul>
+        <li>
+         Izin 1
+        </li>
+        <li>
+         Izin 2
+        </li>
+        <li>
+         Izin 3
+        </li>
+       </ul>
+      </div>
+      <div id="lembur" class="d-none">
+       <h5>
+        Lembur
+       </h5>
+       <p>
+        Daftar lembur karyawan.
+       </p>
+       <ul>
+        <li>
+         Lembur 1
+        </li>
+        <li>
+         Lembur 2
+        </li>
+        <li>
+         Lembur 3
+        </li>
+       </ul>
+      </div>
+      <div id="slip-gaji" class="d-none">
+       <h5>
+        Slip Gaji
+       </h5>
+       <p>
+        Daftar slip gaji karyawan.
+       </p>
+       <ul>
+        <li>
+         Slip Gaji 1
+        </li>
+        <li>
+         Slip Gaji 2
+        </li>
+        <li>
+         Slip Gaji 3
+        </li>
+       </ul>
+      </div>
+      <div id="cetak-gaji" class="d-none">
+       <h5>
+        Cetak Gaji
+       </h5>
+       <p>
+        Cetak gaji karyawan.
+       </p>
+       <ul>
+        <li>
+         Cetak Gaji 1
+        </li>
+        <li>
+         Cetak Gaji 2
+        </li>
+        <li>
+         Cetak Gaji 3
+        </li>
+       </ul>
+      </div>
+      <div id="cetak-laporan" class="d-none">
+       <h5>
+        Cetak Laporan
+       </h5>
+       <p>
+        Cetak laporan karyawan.
+       </p>
+       <ul>
+        <li>
+         Cetak Laporan 1
+        </li>
+        <li>
+         Cetak Laporan 2
+        </li>
+        <li>
+         Cetak Laporan 3
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                this.classList.add('active');
+                document.querySelectorAll('#content-area > div').forEach(div => div.classList.add('d-none'));
+                const targetId = this.textContent.trim().toLowerCase().replace(' ', '-');
+                document.getElementById(targetId).classList.remove('d-none');
+            });
+        });
+  </script>
+ </body>
+</html>
